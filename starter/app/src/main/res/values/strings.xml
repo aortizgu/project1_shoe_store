@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="login_tittle">Login to ShoeStore</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="log_in">Log In</string>
+    <string name="ok">OK</string>
+    <string name="shoe_store">ShoeStore</string>
+    <string name="welcome_message">Hi %s. Welcome to the ShoeStore app.</string>
+    <string name="instructions">ShoeStore is an app to store all references of your shoe store. You will be able to add and list all your shoes references</string>
+    <string name="shoe_detail_name">"Name:"</string>
+    <string name="shoe_detail_size">Size:</string>
+    <string name="shoe_detail_company">"Company:"</string>
+    <string name="shoe_detail_description">Description:</string>
+    <string name="logout">Log Out</string>
 </resources>

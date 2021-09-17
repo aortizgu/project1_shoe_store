@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+    <!-- here we use ConstraintLayout because we need to manage non fixed size fields -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/second_color">
+
+        <TextView
+            android:id="@+id/textViewShoeName"
+            style="@style/shoeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/shoe_detail_name"
+            app:layout_constraintBottom_toTopOf="@+id/textViewShoeSize"
+            app:layout_constraintEnd_toStartOf="@+id/textViewShoeNameValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewShoeNameValue"
+            style="@style/shoeValueTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="@{shoe.name}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewShoeName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewShoeName" />
+
+        <TextView
+            android:id="@+id/textViewShoeSize"
+            style="@style/shoeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/shoe_detail_size"
+            app:layout_constraintBottom_toTopOf="@+id/textViewShoeCompany"
+            app:layout_constraintEnd_toStartOf="@+id/textViewShoeSizeValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewShoeName" />
+
+        <TextView
+            android:id="@+id/textViewShoeSizeValue"
+            style="@style/shoeValueTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="@{String.valueOf(shoe.size)}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewShoeSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewShoeSize" />
+
+        <TextView
+            android:id="@+id/textViewShoeCompany"
+            style="@style/shoeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/shoe_detail_company"
+            app:layout_constraintBottom_toTopOf="@+id/textViewShoeDescription"
+            app:layout_constraintEnd_toStartOf="@+id/textViewShoeCompanyValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewShoeSize" />
+
+        <TextView
+            android:id="@+id/textViewShoeCompanyValue"
+            style="@style/shoeValueTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="@{shoe.company}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewShoeCompany"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewShoeCompany" />
+
+        <TextView
+            android:id="@+id/textViewShoeDescription"
+            style="@style/shoeTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:text="@string/shoe_detail_description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textViewShoeDescriptionValue"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewShoeCompany" />
+
+        <TextView
+            android:id="@+id/textViewShoeDescriptionValue"
+            style="@style/shoeValueTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:text="@{shoe.description}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textViewShoeDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewShoeDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
